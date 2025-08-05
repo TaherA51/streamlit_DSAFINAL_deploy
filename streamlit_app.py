@@ -10,7 +10,7 @@ import requests
 import gdown
 
 st.set_page_config(
-    page_title="Wikipedia Pathfinder",
+    page_title="WikiRoute",
     layout="wide",
     page_icon="🔍"
 )
@@ -107,7 +107,7 @@ page = st.sidebar.radio("Navigate to", ["Home", "About", "Predetermined Paths", 
 
 # Page Selection
 if page == "Home":
-    st.title("🔍 Wikipedia Pathfinder")
+    st.title("🔍 WikiRoute")
     st.write("Find the shortest hyperlink path between two Wikipedia articles.")
 
     if not titles:
@@ -281,11 +281,11 @@ if page == "Home":
                     st.markdown(f"**Path:** " + " → ".join(path_info['path']))
 
 elif page == "About":
-    st.title("About Wikipedia Pathfinder")
+    st.title("About WikiRoute")
     
     st.markdown("""
-    ## What is Wikipedia Pathfinder?
-    Wikipedia Pathfinder is a tool that finds the shortest hyperlink path between two Wikipedia articles. 
+    ## What is WikiRoute?
+    WikiRoute is a tool that finds the shortest hyperlink path between two Wikipedia articles. 
     It uses graph algorithms to navigate through the massive network of Wikipedia pages.
     
     ## How does it work?
@@ -505,4 +505,5 @@ elif page == "Performance Metrics":
                 
     except Exception as e:
         st.error(f"Error loading performance metrics: {e}")
+
         st.error("Please ensure the CSV file format matches the expected structure.")
