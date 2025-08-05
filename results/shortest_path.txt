@@ -1,0 +1,3 @@
+✅ Path from 123 to 456:
+123
+Length: 0
